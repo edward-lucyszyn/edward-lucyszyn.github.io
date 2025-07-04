@@ -16,16 +16,18 @@
         <!-- Wrapper -->
         <div id="wrapper">
 
-
             <!-- Intro -->
-					<div id="intro">
-						<h1>Edward Lucyszyn</h1>
-						<p>Master's student in Operations Research at Columbia University, passionate about mathematics and programming.</p>
-						<ul class="actions" style="margin-top: 200px;">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+            <div id="intro">
+                <div class="profile-pic">
+                    <img src="images/me.jpg" alt="Edward Lucyszyn">
+                </div>
 
+                <h1>Edward Lucyszyn</h1>
+                <p>Graduate student in Operations Research at Columbia University, passionate about Mathematics and Machine Learning.</p>
+                <ul class="actions" style="margin-top: 000px;">
+                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                </ul>
+            </div>
 
             <!-- Header -->
             <header id="header">
@@ -48,9 +50,21 @@
             <!-- Main -->
             <div id="main">
                 <section class="post">
-
-                    <!-- Columbia -->
-                    <section>
+                    <!-- Filter Buttons -->
+                    <div id="filter-buttons">
+                        <ul class="actions">
+                            <li><a href="#" class="button primary filter-button" data-category="overall">Overall</a></li>
+                            <li><a href="#" class="button filter-button" data-category="mathematics">Mathematics</a></li>
+                            <li><a href="#" class="button filter-button" data-category="machine-learning">Machine Learning</a></li>
+                            <li><a href="#" class="button filter-button" data-category="computer-science">Computer Science</a></li>
+                            <li><a href="#" class="button filter-button" data-category="physics">Physics</a></li>
+                            <li><a href="#" class="button filter-button" data-category="finance">Finance</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Course Sections -->
+                    <!-- Columbia Engineering -->
+                    <section class="course-section" data-category="finance mathematics">
                         <header>
                             <h2>Columbia Engineering, Columbia University</h2>
                             <p>Master of Science, Operations Research | New York, NY | <i>Aug 2024 - Expected Dec 2025</i></p>
@@ -64,7 +78,7 @@
                     <hr />
 
                     <!-- CentraleSupélec -->
-                    <section>
+                    <section class="course-section" data-category="finance mathematics machine-learning computer-science">
                         <header>
                             <h2>CentraleSupélec, Paris-Saclay University</h2>
                             <p>Master of Science in Engineering, Applied Mathematics | Paris, France | <i>Aug 2022 - Jun 2024</i></p>
@@ -80,7 +94,7 @@
                     <hr />
 
                     <!-- Lycée Carnot -->
-                    <section>
+                    <section class="course-section" data-category="mathematics computer-science physics">
                         <header>
                             <h2>Scientific Preparatory Classes, Lycée Carnot</h2>
                             <p>Bachelor of Science, Mathematics, Physics, and Computer Science | Dijon, France | <i>Aug 2020 - Jun 2022</i></p>
@@ -136,5 +150,38 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <!-- Filter Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const buttons = document.querySelectorAll('.filter-button');
+            const sections = document.querySelectorAll('.course-section');
+
+            function filterSections(category) {
+                sections.forEach(section => {
+                    if(category === 'overall') {
+                        section.style.display = 'block';
+                    } else {
+                        const categories = section.getAttribute('data-category').split(' ');
+                        if(categories.includes(category)) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Remove the "primary" styling from all buttons and add it to the clicked one.
+                    buttons.forEach(btn => btn.classList.remove('primary'));
+                    this.classList.add('primary');
+                    const category = this.getAttribute('data-category');
+                    filterSections(category);
+                });
+            });
+        });
+        </script>
     </body>
 </html>
