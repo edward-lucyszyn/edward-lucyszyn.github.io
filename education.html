@@ -49,65 +49,89 @@
 
             <!-- Main -->
             <div id="main">
-                <section class="post">
-                    <!-- Filter Buttons -->
-                    <div id="filter-buttons">
-                        <ul class="actions">
-                            <li><a href="#" class="button primary filter-button" data-category="overall">Overall</a></li>
-                            <li><a href="#" class="button filter-button" data-category="mathematics">Mathematics</a></li>
-                            <li><a href="#" class="button filter-button" data-category="machine-learning">Machine Learning</a></li>
-                            <li><a href="#" class="button filter-button" data-category="computer-science">Computer Science</a></li>
-                            <li><a href="#" class="button filter-button" data-category="physics">Physics</a></li>
-                            <li><a href="#" class="button filter-button" data-category="finance">Finance</a></li>
-                        </ul>
+            <section class="post">
+
+                <p>Here is all my academic background during my University journey. You can choose the subject you are interested in to filter the courses.</p>
+
+                <!-- filter buttons wrapped in a closed major header -->
+                <header class="major">
+                <div id="filter-buttons" style="text-align:center;">
+
+                    <!-- first row -->
+                    <ul class="actions" style="justify-content: center; margin-bottom: 1rem;">
+                    <li><a href="#" class="button primary filter-button" data-category="overall">Overall</a></li>
+                    <li><a href="#" class="button filter-button" data-category="mathematics">Mathematics</a></li>
+                    <li><a href="#" class="button filter-button" data-category="data-science">Machine Learning</a></li>
+                    <li><a href="#" class="button filter-button" data-category="applied-mathematics">Applied Maths</a></li>
+                    </ul>
+
+                    <!-- second row -->
+                    <ul class="actions" style="justify-content: center;">
+                    <li><a href="#" class="button filter-button" data-category="computer-science">Computer Science</a></li>
+                    <li><a href="#" class="button filter-button" data-category="finance">Finance</a></li>
+                    <li><a href="#" class="button filter-button" data-category="physics">Physics</a></li>
+                    </ul>
+
+                </div>
+                </header>
+
+                <hr />
+
+                <!-- Course Sections -->
+
+                <!-- Columbia Engineering -->
+                <section class="course-section" data-category="finance mathematics">
+                <header>
+                    <div style="display:flex; justify-content: space-between; align-items: center;">
+                    <h2>Columbia Engineering, Columbia University</h2>
+                    <img src="images/education/columbia_logo.jpg" alt="Columbia University logo" style="height:5cm; width:auto;" />
                     </div>
-                    
-                    <!-- Course Sections -->
-                    <!-- Columbia Engineering -->
-                    <section class="course-section" data-category="finance mathematics">
-                        <header>
-                            <h2>Columbia Engineering, Columbia University</h2>
-                            <p>Master of Science, Operations Research | New York, NY | <i>Aug 2024 - Expected Dec 2025</i></p>
-                        </header>
-                        <div class="image main"><img src="images/education/columbia2.jpg" alt="" /></div>
-                        <p>
-                            <strong>Relevant coursework:</strong> Data-Driven Methods in Finance, Optimization, Quantitative Corporate Finance, FX and Related Derivatives.
-                        </p>
-                    </section>
-
-                    <hr />
-
-                    <!-- CentraleSupélec -->
-                    <section class="course-section" data-category="finance mathematics machine-learning computer-science">
-                        <header>
-                            <h2>CentraleSupélec, Paris-Saclay University</h2>
-                            <p>Master of Science in Engineering, Applied Mathematics | Paris, France | <i>Aug 2022 - Jun 2024</i></p>
-                        </header>
-                        <div class="image main"><img src="images/education/centrale.jpg" alt="" /></div>
-                        <p>
-                            <strong>GPA:</strong> 4.07/4.33, Top 3%. Student Representative for 500+ international students.<br>
-                            <strong>Relevant coursework:</strong> Stochastic Finance, Risk Modelling, Machine Learning, Cryptology, Cloud and Distributed Computing.<br>
-                            Active member of the boxing team and Internet Service Provider Association.
-                        </p>
-                    </section>
-
-                    <hr />
-
-                    <!-- Lycée Carnot -->
-                    <section class="course-section" data-category="mathematics computer-science physics">
-                        <header>
-                            <h2>Scientific Preparatory Classes, Lycée Carnot</h2>
-                            <p>Bachelor of Science, Mathematics, Physics, and Computer Science | Dijon, France | <i>Aug 2020 - Jun 2022</i></p>
-                        </header>
-                        <div class="image main"><img src="images/education/carnot.jpg" alt="" /></div>
-                        <p>
-                            Preparation for highly selective entrance exams to Grandes Écoles.<br>
-                            <strong>Relevant coursework:</strong> Algebra, Analysis, Probabilities, Algorithmics, Complexity, Statistics.<br>
-                            <strong>Personal Project:</strong> Modeled forest fire propagation and strategies to reduce their speed and spread.
-                        </p>
-                    </section>
+                    <p>Master of Science, Operations Research | New York, NY | <i>Aug 2024 – Expected Dec 2025</i></p>
+                </header>
+                <p>
+                    <strong>Relevant coursework:</strong> Optimization (PhD), Machine Learning in Practice, Data Mining, Data-Driven Methods in Finance, FX and Related Derivatives.
+                </p>
                 </section>
+
+                <hr />
+
+                <!-- CentraleSupélec -->
+                <section class="course-section" data-category="finance mathematics machine-learning computer-science">
+                <header>
+                    <div style="display:flex; justify-content: space-between; align-items: center;">
+                    <h2>CentraleSupélec, Paris–Saclay University</h2>
+                    <img src="images/education/centralesupelec_logo.png" alt="CentraleSupélec logo" style="height:3cm; width:auto;" />
+                    </div>
+                    <p>Master of Science in Engineering, Applied Mathematics | Paris, France | <i>Aug 2022 – Jun 2024</i></p>
+                </header>
+                <p>
+                    <strong>GPA:</strong> 4.07/4.33, Top 3%. Student Representative for 500+ international students.<br>
+                    <strong>Relevant coursework:</strong> Stochastic Finance, Risk Modelling, Machine Learning, Cryptology, Cloud and Distributed Computing.<br>
+                    Active member of the boxing team and Internet Service Provider Association.
+                </p>
+                </section>
+
+                <hr />
+
+                <!-- Lycée Carnot -->
+                <section class="course-section" data-category="mathematics computer-science physics">
+                <header>
+                    <div style="display:flex; justify-content: space-between; align-items: center;">
+                    <h2>Scientific Preparatory Classes, Lycée Carnot</h2>
+                    <img src="images/education/carnot_logo.png" alt="Lycée Carnot logo" style="height:3cm; width:auto;" />
+                    </div>
+                    <p>Bachelor of Science, Mathematics, Physics, and Computer Science | Dijon, France | <i>Aug 2020 – Jun 2022</i></p>
+                </header>
+                <p>
+                    Preparation for highly selective entrance exams to Grandes Écoles.<br>
+                    <strong>Relevant coursework:</strong> Algebra, Analysis, Probabilities, Algorithmics, Complexity, Statistics.<br>
+                    <strong>Personal Project:</strong> Modeled forest fire propagation and strategies to reduce their speed and spread.
+                </p>
+                </section>
+
+            </section>
             </div>
+
 
             <!-- Footer -->
             <footer id="footer">
